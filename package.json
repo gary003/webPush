@@ -1,0 +1,15 @@
+{
+  "name": "nodepushnotification",
+  "version": "1.0.0",
+  "description": "first test on web push notification for Karl.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "GJ",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "web-push": "^3.4.5"
+  }
+}
