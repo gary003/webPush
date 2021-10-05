@@ -5,6 +5,6 @@ self.addEventListener("push", (e) => {
   console.log("push received")
 
   self.registration.showNotification(data.title, {
-    body: "Notified by GJ"
+    body: data.content
   })
 })

@@ -21,16 +21,17 @@ addEventListener("load", async () => {
     })
     .catch((err) => console.error(err))
   console.log("push registered")
+  console.log(subscription)
 })
 
-const subscribe = async () => {
+const notifications = async () => {
   if (!"serviceWorker" in navigator) {
     return new Error("No service worker available, please try an other browser for notifications.")
   }
 
   // fetching the app push route
   console.log("pushing notification")
-  await fetch("/subscribe", {
+  await fetch("/notifications", {
     method: "POST",
     body: JSON.stringify(subscription),
     headers: {

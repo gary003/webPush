@@ -15,13 +15,22 @@ webpush.setVapidDetails("mailTo:test@test.com", publicVapidKey, privateVapidKey)
 
 app.use(express.json())
 
-app.post("/subscribe", (req, res) => {
+// const { MongoClient } = require("mongodb")
+// const uri = "mongodb+srv://garyFcc:<password>@fccex.1zhjz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+// client.connect((err) => {
+//   const collection = client.db("test").collection("devices")
+//   // perform actions on the collection object
+//   client.close()
+// })
+
+app.post("/notifications", (req, res) => {
   const subs = req.body
 
   res.status(201).json({})
 
   //optional
-  const payload = JSON.stringify({ title: "Push Test" })
+  const payload = JSON.stringify({ title: "Push Test", content: "Hi, this is a notification" })
 
   webpush.sendNotification(subs, payload).catch((err) => console.log(err))
 })
