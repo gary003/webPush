@@ -25,7 +25,7 @@ app.use(express.json())
 //   client.close()
 // })
 
-app.post("/notifications", (req, res) => {
+app.post("*/notifications", (req, res) => {
   const subs = req.body
 
   res.status(201).json({})

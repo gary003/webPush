@@ -30,7 +30,7 @@ const notifications = async () => {
   }
 
   // fetching the app push route
-  console.log("pushing notification")
+  console.log("pushing notification ")
   await fetch("/notifications", {
     method: "POST",
     body: JSON.stringify(subscription),
