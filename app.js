@@ -2,11 +2,12 @@ const express = require("express")
 const webpush = require("web-push")
 const path = require("path")
 const logger = require("morgan")
-
+const cors = require("cors")
 const app = express()
 
 app.use(express.static(path.join(__dirname, "client")))
 app.use(logger("dev"))
+app.use(cors())
 
 const publicVapidKey = "BI54aD1IHv1ZVK_3HafrXMeSQF-nBhrTnsZEJParg6s0PIgP888RrkYcqvL0kTEc5yi33XJI86p8Q9eZtPi1V3o"
 const privateVapidKey = "JC0nm2gS3hUC637U8fHyxfmi5CL1UR70VTHx5sqvk9w"
