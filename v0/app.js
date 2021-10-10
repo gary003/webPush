@@ -33,13 +33,6 @@ app.post("/notificationButton", (req, res) => {
 
   res.status(201).json({})
 
-  const notificationRequest = "select * from web_push.notification;"
-
-  con.query(notificationRequest, (err, result) => {
-    if (err) throw err
-    console.log(JSON.stringify(result))
-  })
-
   //optional
   const payload = JSON.stringify({ title: "Push Test", content: "Hi, this is a notification" })
 

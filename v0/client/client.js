@@ -21,7 +21,6 @@ addEventListener("load", async () => {
     })
     .catch((err) => console.error(err))
   console.log("push registered")
-  console.log(subscription)
 })
 
 const notifications = async () => {

@@ -12,16 +12,15 @@ create table user(
   primary key(user_id)
 );
 
-insert into user(  
+insert into user(
   user_name,
   created_at,
   deleted_at
 ) values
-('Ted256', '', ''),
-('Maria956', '', ''),
-('Sarah123', '', '')
+  ('Ted256', '', ''),
+  ('Maria956', '', ''),
+  ('Sarah123', '', '')
 ;
-
 
 create table notification(
   notification_id int AUTO_INCREMENT,
