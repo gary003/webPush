@@ -9,7 +9,7 @@ export class Notification {
   notification_user_id: number
 
   @Column("int")
-  descrnotification_new_follower_idiption: number
+  notification_new_follower: number
 
   @Column("text")
   notification_title: string
